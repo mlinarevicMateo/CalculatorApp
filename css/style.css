@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+    font-family: "Digit";
+    src: url('../fonts/Digit.TTF');
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+}
+body{
+  height:100%;
+  width: 100%;
+}
+
+.container{
+  background-color: #5a5d70;
+  width:100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+.container, .calcScreen{
+  border-radius:1em;
+}
+.clear, .operation{
+  background-color:#2a2a2f;
+}
+.backspace{
+  background-color:#c33643;
+  background-image: url(../images/backspace.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.calcScreen{
+  position: relative;
+  background-color: #7aab8b;
+  width:90%;
+  height: 25%;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+.row{
+  position:relative;
+  background-color: inherit;
+  width:95%;
+  height:33%;
+  margin: auto;
+  border-radius: inherit;
+  text-align: right;
+  color: #2a2a2f;
+  font-family: Digit;
+  font-size:2em;
+}
+.line{
+  position:absolute;
+  z-index:1;
+  right:0.2em;
+  width:75%;
+  height:0.1em;
+}
+.green{background-color: #7aab8b;}
+.black{background-color: #2a2a2f;}
+.calcButtons{
+  position: relative;
+  background-color: #5a5d70;
+  width:90%;
+  height: 70%;
+  margin: 0 auto;
+}
+button{
+  position: relative;
+  background-color: #8b8d9c;
+  color:#efefef;
+  font-size: 2em;
+  font-family: Roboto-Bold;
+  height: 18%;
+  width:23%;
+  margin:1%;
+  float:left;
+  border-radius:0.25em;
+}
+/* What happens when button is pressed, active->change background color,
+   focus->remove blue outline */
+button:active {
+  background-color: #7ACCC8;
+}
+button:focus {
+  outline:0;
+}
+/* Styling buttons '=' and '0' to be proper height/width */
+.equals{
+  display:inline-block;
+  float:right;
+  height:38%;
+}
+.zero{
+  display:inline-block;
+  float:left;
+  width:48%;
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (min-width : 0px) and (max-width : 599px) {
+  .container{
+    height: 100vh;
+    width: 100%;
+    border-radius:0px;
+  }
+  .calcScreen{
+    font-size: 2.5vh;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) {
+    .container{
+      height: 80vh;
+      width: 450px;
+      margin-top:10vh;
+    }
+}
+/* Desktops */
+@media only screen and (min-width: 768px) {
+    .container{
+      height: 90vh;
+      width: 450px;
+      margin-top:5vh;
+    }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen
+  and (min-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .container{
+      height: 70vh;
+      width: 450px;
+      margin-top:15vh;
+    }
+    .calcScreen{
+      font-size: 2.05vh;
+    }
+}
+/* Landscape */
+@media only screen
+  and (min-width: 768px)
+  and (max-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .container{
+      height: 80vh;
+      width: 450px;
+      margin-top:10vh;
+    }
+}
+
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen
+  and (min-width: 1024px)
+  and (max-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .container{
+      height: 70vh;
+      width: 600px;
+      margin-top:15vh;
+    }
+}
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen
+  and (min-width: 1366px)
+  and (max-width: 1366px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .container{
+      height: 80vh;
+      width: 600px;
+      margin-top:10vh;
+    }
+}
+
+
+/* ----------- Kindle Fire HDX" ----------- */
+/* Portrait */
+@media only screen
+  and (min-width: 800px)
+  and (max-width: 1280px)
+  and (-webkit-min-device-pixel-ratio: 1.5)
+  and (orientation: portrait) {
+    .container{
+      height: 80vh;
+      width: 700px;
+      margin-top:10vh;
+    }
+}

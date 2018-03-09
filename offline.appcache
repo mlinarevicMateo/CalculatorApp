@@ -1,0 +1,11 @@
+CACHE MANIFEST
+index.html
+css/style.css
+fonts/Digit.TTF
+fonts/Roboto-Bold.ttf
+images/backspace.png
+images/favicon.png
+js/script.js
+
+NETWORK:
+*

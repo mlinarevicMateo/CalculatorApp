@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html manifest="offline.appcache">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+    <!-- I use minimal-ui to hide url adress bar in mobile devices (when you scroll down, it disappears), so the
+    calculator takes whole screen -->
+
+    <!-- To be mobile app capable, so it can be added to home screen of users device -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- For Mobile devices, if user add a shortcut on homepage, default application name is Calculator -->
+    <meta name="application-name" content="Calculator" />
+    <meta name="apple-mobile-web-app-title" content="Calculator" />
+    <!--icons for browser and mobile devices-->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="icon" sizes="192x192" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="/img/touch/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="calcScreen" id="screen">
+        <div class="row" id="firstRow"></div>
+        <div class="row" id="secondRow"></div>
+        <hr class="line green" id="line">
+        <div class="row" id="resultRow"></div>
+      </div>
+      <br>
+      <div class="calcButtons" id="calcButtons">
+        <button type="button" value="C" id="clearButton" class="button clear">C</button>
+        <button type="button" value="/" id="divide" class="button operation">&#xf7;</button>
+        <button type="button" value="*" id="multiply" class="button operation">&#xd7;</button>
+        <button type="button" value="backspace" id="backspace" class="button backspace"></button>
+        <button type="button" value="7" id="seven" class="button">7</button>
+        <button type="button" value="8" id="eight" class="button">8</button>
+        <button type="button" value="9" id="nine" class="button">9</button>
+        <button type="button" value="+" id="plus" class="button operation">&#x2b;</button>
+        <button type="button" value="4" id="four" class="button">4</button>
+        <button type="button" value="5" id="five" class="button">5</button>
+        <button type="button" value="6" id="six" class="button">6</button>
+        <button type="button" value="-" id="minus" class="button operation">&#x2212;</button>
+        <button type="button" value="1" id="one" class="button">1</button>
+        <button type="button" value="2" id="two" class="button">2</button>
+        <button type="button" value="3" id="three" class="button">3</button>
+        <button type="button" value="=" id="equals" class="button equals operation">&#x3d;</button>
+        <button type="button" value="0" id="zero" class="button zero">0</button>
+        <button type="button" value="." id="dot" class="button">&#x22C5;</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
